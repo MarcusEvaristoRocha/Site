@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cultivo</title>
+    <title>Método de Cultivo</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -27,17 +27,31 @@
         <section class="etapas">
             <h2>Etapas do Cultivo</h2>
             <ol>
-                <li>Preparo do Solo: Solo fértil e bem drenado é essencial.</li>
-                <li>Plantio: As mudas são plantadas em covas com espaçamento adequado.</li>
-                <li>Adubação: Feita com matéria orgânica e fertilizantes ricos em potássio.</li>
-                <li>Irrigação: Mantém o solo úmido sem encharcar.</li>
-                <li>Colheita: Ocorre entre 9 a 12 meses após o plantio.</li>
+                <li><strong>Preparo do Solo:</strong> Solo fértil e bem drenado é essencial.</li>
+                <li><strong>Plantio:</strong> As mudas são plantadas em covas com espaçamento adequado.</li>
+                <li><strong>Adubação:</strong> Feita com matéria orgânica e fertilizantes ricos em potássio.</li>
+                <li><strong>Irrigação:</strong> Mantém o solo úmido sem encharcar.</li>
+                <li><strong>Colheita:</strong> Ocorre entre 9 a 12 meses após o plantio.</li>
             </ol>
         </section>
+        
+        <div class="fechar-app-container">
+            <button id="fecharApp">Fechar Aplicativo</button>
+        </div>
     </main>
 
     <footer>
         <p>🍌 Bananas 🍌</p>
     </footer>
+
+    <script>
+        document.getElementById("fecharApp").addEventListener("click", function() {
+            try {
+                window.AppInventor.setWebViewString("fechar");
+            } catch (e) {
+                alert("Este botão só funciona dentro do aplicativo.");
+            }
+        });
+    </script>
 </body>
 </html>
