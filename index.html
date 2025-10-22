@@ -13,14 +13,6 @@
             <ul>
                 <li><a href="index.html" class="ativo">Início</a></li>
                 <li><a href="cultivo.html">Método de Cultivo</a></li>
-                <li>
-                    <button onclick="fecharApp()">Fechar Aplicativo</button>
-                    <script>
-                        function fecharApp() {
-                            window.AppInventor.setWebViewString("fechar");
-                        }
-                    </script>
-                </li>
             </ul>
         </nav>
     </header>
@@ -40,11 +32,25 @@
                 <li>No Brasil, o maior produtor é o estado da Bahia.</li>
             </ul>
         </section>
+
+        <div class="fechar-app-container">
+            <button id="fecharApp">Fechar Aplicativo</button>
+        </div>
     </main>
 
     <footer>
         <p>🍌 Bananas 🍌</p>
     </footer>
-</body>
 
+    <script>
+        document.getElementById("fecharApp").addEventListener("click", function() {
+            try {
+                // Envia o sinal ao WebViewer do App Inventor
+                window.AppInventor.setWebViewString("fechar");
+            } catch (e) {
+                alert("Este botão só funciona dentro do aplicativo.");
+            }
+        });
+    </script>
+</body>
 </html>
