@@ -39,7 +39,6 @@ nav a:hover, nav a.ativo {
     background-color: #ffe873;
 }
 
-/* ======= CONTEÚDO ======= */
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -66,6 +65,28 @@ ul, ol {
     padding-left: 1.5rem;
 }
 
+.fechar-app-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#fecharApp {
+    background-color: #ffcc00;
+    color: #3c3c3c;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+#fecharApp:hover {
+    background-color: #ffd84d;
+}
+
 footer {
     background-color: #f7d358;
     color: #3c3c3c;
@@ -81,5 +102,9 @@ footer {
 
     .imagem-destaque {
         max-height: 250px;
+    }
+
+    #fecharApp {
+        width: 80%;
     }
 }
